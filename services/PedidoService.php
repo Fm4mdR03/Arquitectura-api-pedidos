@@ -13,7 +13,7 @@ class PedidoService {
     }
 
     public function crearPedido($datos) {
-        // 1. REGLA DE NEGOCIO: Validar que el usuario exista
+        // 1. Validar que el usuario exista
         if (!isset($datos->usuario_id) || !isset($datos->producto) || !isset($datos->monto)) {
             throw new Exception("Datos incompletos. Se requiere usuario_id, producto y monto.");
         }

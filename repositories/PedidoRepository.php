@@ -12,7 +12,6 @@ class PedidoRepository {
         $query = "INSERT INTO pedidos (producto, monto, usuario_id) VALUES (:producto, :monto, :usuario_id)";
         $stmt = $this->conn->prepare($query);
 
-        // Limpieza básica de datos
         $pedido->producto = htmlspecialchars(strip_tags($pedido->producto));
         
         $stmt->bindParam(":producto", $pedido->producto);

@@ -3,8 +3,8 @@
 class Database {
     private $host = "localhost";
     private $db_name = "sistema_pedidos";
-    private $username = "root"; // Usuario por defecto en Laragon
-    private $password = "";     // Contraseña vacía por defecto en Laragon
+    private $username = "root";
+    private $password = "";
     public $conn;
 
     public function getConnection() {
